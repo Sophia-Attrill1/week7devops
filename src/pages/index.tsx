@@ -1,7 +1,7 @@
 import {PencilIcon, PlusIcon, TrashIcon} from "@heroicons/react/outline";
 import axios from "axios";
 import {GetServerSideProps} from "next";
-import {useSession} from "next-auth/react";
+import useSession from "../hooks/useNextAuth";
 import Head from "next/head";
 import Link from "next/link";
 import {useRouter} from "next/router";
@@ -38,6 +38,7 @@ export default function Home({rooms}) {
     <div className="flex">
       <Head>
         <title>Solent Room Tracker</title>
+        {process.env.NEXT_PUBLIC_TESTING}
         <meta name="description" content="Home" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -18,3 +18,5 @@ jobs:
           wait-on: "http://localhost:3000"
         env:
           MONGODB_URI: "mongodb+srv://test:test@cluster0.x08wt.mongodb.net/rooms_test?retryWrites=true&w=majority"
+          NEXT_PUBLIC_TESTING: true
+          NEXTAUTH_SECRET: "WE-3ntIDjWCoe2oZRjM8S3U0LyI"
